@@ -1,0 +1,8 @@
+<div style="height: calc(100vh - 20px); width: calc(100vw - 15px)">
+  <button (click)="onBtnSave()">SAVE</button>
+  <document-editor
+    [id]="editorId"
+    documentServerUrl="http://localhost/"
+    [config]="config"
+  ></document-editor>
+</div>
