@@ -4,6 +4,23 @@
 
 export const environment = {
   production: false,
+  onlyoffice: {
+    documentServerUrl: 'http://localhost/',
+    defaultConfig: {
+      document: {
+        fileType: '',
+        title: '',
+        url: '',
+      },
+      editorConfig: {
+        callbackUrl: 'http://host.docker.internal:8081/post-sample',
+        customization: {
+          autosave: false,
+          forcesave: true,
+        },
+      },
+    },
+  },
 };
 
 /*

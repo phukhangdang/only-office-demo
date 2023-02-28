@@ -1,8 +1,11 @@
-<div style="height: calc(100vh - 20px); width: calc(100vw - 15px)">
-  <button (click)="onBtnSave()">SAVE</button>
+<div
+  *ngIf="fileReady"
+  style="height: calc(100vh - 16px); width: calc(100vw - 16px)"
+>
   <document-editor
     [id]="editorId"
-    documentServerUrl="http://localhost/"
+    [documentServerUrl]="documentServerUrl"
     [config]="config"
+    [events_onDocumentReady]="onDocumentReady"
   ></document-editor>
 </div>
